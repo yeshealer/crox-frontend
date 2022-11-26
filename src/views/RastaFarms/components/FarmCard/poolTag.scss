@@ -1,0 +1,36 @@
+$price-tag__width-after: 10px;
+
+.rastaFarm {
+    width: 0;
+    height: 0;
+    position: relative;
+
+    &__price-tag {
+        width: 80px;
+        display: flex;
+        align-items: center;
+        height: 32px;
+        border-radius: 4px 4px 4px 0;
+        background: #0f1c3c;
+        background: radial-gradient(at center, #1a2d5c, #08122c);
+        border: 1px solid darkslategrey;
+        position: absolute;
+        top: -25px;
+        left: -27px;
+        justify-content: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            border-left: $price-tag__width-after solid transparent;
+            border-top: 5px solid #3860c5;
+            left: 0px;
+            top: 31px;
+        }
+
+        &-price {
+            color: #2d74c4;
+            font-size: 16px;
+        }
+    }
+}

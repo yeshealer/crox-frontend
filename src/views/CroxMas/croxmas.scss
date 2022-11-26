@@ -1,0 +1,195 @@
+$globe-width: 12px;
+$globe-height: 28px;
+$globe-spacing: 40px;
+$globe-spread: 3px;
+$light-off-opacity: 0.4;
+
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --font-script: "Gochi Hand";
+  --font-sans-serif: "Poppins", sans-serif;
+  --gold: #ffffff;
+  --light-shadow: #ffffff;
+  --dark-shadow: #ffffff;
+  --font-snow-script: "Cartoon Blocks Christmas SC";
+}
+
+//function + mixin
+@function shadow-string($color1, $color2, $length) {
+  $total-length: $length;
+  $string: $color1 0px 0px;
+  @while $length > 0 {
+    $mix-amount: 100 - (($length / $total-length) * 100);
+    $mixed-color: mix($color1, $color2, $mix-amount);
+    $string-addition: $length + px $length + px;
+    $string: $mixed-color $string-addition, $string;
+    $length: $length - 1;
+  }
+  @return $string;
+}
+
+@mixin longshadow($color1, $color2, $length) {
+  text-shadow: shadow-string($color1, $color2, $length);
+}
+
+//color vars
+$color-bg: #ffffff;
+$color-title: #ffffff;
+$color-line-1: #ff6138;
+$color-line-2: #9e00a3;
+$color-line-3: #00a388;
+
+//styling
+.title {
+  font-size: 2vw;
+  padding: 0.5vw 0;
+  .title-part {
+    font-weight: 600;
+    display: block;
+    color: $color-title;
+    &.line-2 {
+      font-size: 2vw;
+      color: white;
+    }
+  }
+}
+
+.lightrope {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  margin: -15px 0 0 0;
+  padding: 0;
+  pointer-events: none;
+  width: 100%;
+  li {
+    position: relative;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: $globe-width;
+    height: $globe-height;
+    border-radius: 50%;
+    margin: calc($globe-spacing/2);
+    display: inline-block;
+    background: rgba(0, 247, 165, 1);
+    box-shadow: 0px calc($globe-height/6) $globe-width * 2 $globe-spread rgba(0, 247, 165, 1);
+    animation-name: flash-1;
+    animation-duration: 2s;
+    &:nth-child(2n + 1) {
+      background: rgba(0, 255, 255, 1);
+      box-shadow: 0px calc($globe-height/6) $globe-width * 2 $globe-spread rgba(0, 255, 255, 0.5);
+      animation-name: flash-2;
+      animation-duration: 0.4s;
+    }
+    &:nth-child(4n + 2) {
+      background: rgb(243, 247, 0);
+      box-shadow: 0px calc($globe-height/6) $globe-width * 2 $globe-spread rgb(243, 247, 0);
+      animation-name: flash-3;
+      animation-duration: 1.1s;
+    }
+    &:nth-child(odd) {
+      animation-duration: 1.8s;
+    }
+    &:nth-child(3n + 1) {
+      animation-duration: 1.4s;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      background: #222;
+      width: ($globe-width - 2);
+      height: calc($globe-height/3);
+      border-radius: 3px;
+      top: (0 - (calc($globe-height/6)));
+      left: 1px;
+    }
+    &:after {
+      content: "";
+      top: (0 - calc($globe-height/2));
+      left: $globe-width - 3;
+      position: absolute;
+      width: $globe-spacing + 12;
+      height: (calc($globe-height/3) * 2);
+      border-bottom: solid #222 2px;
+      border-radius: 50%;
+    }
+    &:last-child:after {
+      content: none;
+    }
+    &:first-child {
+      margin-left: -$globe-spacing;
+    }
+  }
+}
+@keyframes flash-1 {
+  0%,
+  100% {
+    background: rgba(0, 247, 165, 1);
+    box-shadow: 0px calc($globe-height/6) $globe-width * 2 $globe-spread rgba(0, 247, 165, 1);
+  }
+  50% {
+    background: rgba(0, 247, 165, $light-off-opacity);
+    box-shadow: 0px calc($globe-height/6) $globe-width * 2 $globe-spread rgba(0, 247, 165, 0.2);
+  }
+}
+@keyframes flash-2 {
+  0%,
+  100% {
+    background: rgba(0, 255, 255, 1);
+    box-shadow: 0px calc($globe-height/6) $globe-width * 2 $globe-spread rgba(0, 255, 255, 1);
+  }
+  50% {
+    background: rgba(0, 255, 255, $light-off-opacity);
+    box-shadow: 0px calc($globe-height/6) $globe-width * 2 $globe-spread rgba(0, 255, 255, 0.2);
+  }
+}
+@keyframes flash-3 {
+  0%,
+  100% {
+    background: rgb(243, 247, 0);
+    box-shadow: 0px calc($globe-height/6) $globe-width * 2 $globe-spread rgb(243, 247, 0);
+  }
+  50% {
+    background: rgba(247, 0, 148, $light-off-opacity);
+    box-shadow: 0px calc($globe-height/6) $globe-width * 2 $globe-spread rgb(247, 161, 0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 3vw;
+    padding: 1vw 0;
+    .title-part {
+      &.line-3 {
+        font-size: 4vw;
+      }
+      &.line-2 {
+        display: none;
+      }
+    }
+  }
+  .wrapper > div {
+    font-size: 7vw;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .title {
+    font-size: 4vw;
+    padding: 1vw 0;
+    .title-part {
+      &.line-3 {
+        font-size: 5vw;
+        text-align: center;
+      }
+    }
+  }
+}

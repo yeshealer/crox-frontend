@@ -1,0 +1,40 @@
+.progress-container {
+    text-align: center;
+  }
+  
+.progress {
+  margin: 15px auto;
+  color: #f80;
+  height: 30px;
+  width: 70%;
+  background-color: #2C2D3A;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid white;
+  text-align: left;
+}
+
+.progress-text {
+  margin: 7px 2%;
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  display: flex;
+}
+.price {
+  width: 100%;
+  padding-right: 5%;
+  justify-content: end;
+}
+
+.progress .value {
+  background-color: #2d74c4;
+  display: inline-block;
+  height: 100%;
+  /* border-radius: 10px 0 0 10px; */
+  color: white;
+}
+
+.wallet-input::placeholder {
+  opacity: 0.3;
+}

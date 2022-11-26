@@ -1,0 +1,47 @@
+{
+  "liveCards": [
+    {
+      "active": false,
+      "liveId": 1,
+      "projectName": "Rx Seed Coin",
+      "tokenName": "WSOW",
+      "forsale": 2400000,
+      "raise": 350000,
+      "burnCrox": 35000,
+      "Audited": true,
+      "date": "17th Jan, 2022",
+      "Kyc": true,
+      "web": "https://rxseedcoin.io",
+      "twitter": "https://twitter.com/rxseedcoin",
+      "telegram": "https://t.me/rxseedcoinchat",
+      "bscAddress": "0xe70d287aad130e2cee520e75d12c6efa4f1a377d",
+      "audit": "https://rxseedcoin.io/wp-content/uploads/2021/12/wSOW-Audit-Report.pdf",
+      "whitepaper": "https://rxseedcoin.io/wp-content/uploads/2022/01/rxSeedCoin_whitePaper_20220108.pdf",
+      "tokenomics": "https://rxseedcoin.io/tokenomics/",
+      "visit": "https://rxseedcoin.io",
+      "tier1": {
+        "hardcap": 150000,
+        "minlimit": 100,
+        "maxlimit": 5000,
+        "tokendistribution1": "25% Vested for 4 months",
+        "tokenprice1": 0.125,
+        "progress": 0
+      },
+      "tier2": {
+        "hardcap": 200000,
+        "minlimit": 120,
+        "maxlimit": 3600,
+        "tokendistribution2": "No Vesting. Whitelisted Wallets only.",
+        "tokenprice2": 0.150,
+        "progress": 0
+      },
+      "tokenAddresses": {
+        "crox": "0x2c094f5a7d1146bb93850f629501eb749f6ed491",
+        "busd": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "wsow": "0xe70D287AaD130e2Cee520e75d12C6efa4f1A377d",
+        "tokenSale1": "0xAAe3ff7716BcB24802A585FBF4B2787843f974f0",
+        "tokenSale2": "0x512C18e9d258fbf0E3c12DD6d36d71d83b074Cf9"
+      }
+    }
+  ]
+}

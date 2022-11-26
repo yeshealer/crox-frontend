@@ -1,0 +1,394 @@
+.vaultBody {
+    max-width: 1300px;
+    padding: 10px 4vw 0;
+    &__description {
+        max-width: 400px;
+        border: 2px dotted #264e7c;
+        height: min-content;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 20px;
+    }
+}
+
+.statsCard {
+    border: 2px dotted #264e7c;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    div:nth-child(2) {
+        margin-bottom: -5px;
+    }
+}
+
+.strategyCard {
+    border: 2px dotted #264e7c;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 355px;
+}
+
+.vaultCard {
+    position: relative;
+    border: 2px dotted #264e7c;
+    border-radius: 10px;
+    height: min-content;
+    width: 400px;
+    &__first {
+        width: 100%;
+        padding: 44px 12px 10px 30px;
+    }
+    &__badge {
+        padding: 3px 10px;
+        height: 32px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 8px;
+        background-image: radial-gradient(circle farthest-corner at 85.4% 50.8%, #264e7c 0%, #264e7c 74.2%);
+        position: absolute;
+        right: 0;
+    }
+    &__img {
+        width: 102px;
+        height: fit-content;
+    }
+    &__btn {
+        font-size: 16px;
+        height: 40px;
+        width: 160px;
+        border-radius: 5px;
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        &.win_cake {
+            font-size: 16px;
+            height: 30px;
+        }
+    }
+    .btn_group {
+        margin-top: 10px;
+        button {
+            font-size: 16px;
+            border: none;
+            color: white;
+            background-color: #2d74c4;
+            padding: 8px 16px;
+            border-radius: 8px;
+            height: 40px;
+            cursor: pointer;
+            &:nth-child(1) {
+                margin-right: 10px;
+                background-color: #313d49;
+            }
+        }
+    }
+}
+
+.modalBody {
+    overflow: hidden;
+}
+
+.depositModal {
+    background-color: #131823;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 550px;
+    .closeIcon {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    .modalHeader {
+        margin-bottom: 10px;
+    }
+    .deposit_group {
+        background-color: #090a0c;
+        border-radius: 10px;
+        padding: 10px;
+        .deposit_balance {
+            outline: none;
+            border: none;
+            background-color: #090a0c;
+            color: white;
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 8px;
+        }
+        .max_btn {
+            border: none;
+            outline: none;
+            background: #2d74c41e;
+            color: #448fe6;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.5s;
+            border-radius: 10px;
+            margin-left: 5px;
+            &:hover {
+                background: #2d74c444;
+            }
+        }
+    }
+    .percent_btnGroup {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10% 20% 30% 40%;
+        margin-top: 10px;
+        .percent_btn {
+            border: none;
+            outline: none;
+            background: #2d74c41e;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.2s;
+            padding: 5px;
+            cursor: pointer;
+            &:hover {
+                background: #2d74c444;
+            }
+            &:nth-child(2) {
+                margin-left: 10px;
+            }
+            &:nth-child(3) {
+                margin-left: 10px;
+            }
+            &:nth-child(4) {
+                margin-left: 10px;
+            }
+        }
+    }
+    .action_btnGroup {
+        width: 100%;
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background-color: #2d74c4;
+            color: white;
+            font-size: 16px;
+            transition: all 0.2s;
+            padding: 8px 20px;
+            &:nth-child(1) {
+                &:hover {
+                    background-color: #2d74c4d7;
+                }
+                &:disabled {
+                    background-color: #1f252b;
+                    color: grey;
+                }
+            }
+            &:nth-child(2) {
+                background-color: transparent;
+                border: 2px dotted #2d74c4;
+                color: #2d74c4;
+                &:hover {
+                    border: 2px dotted #2d74c4a0;
+                    color: #2d74c4a0;
+                }
+            }
+        }
+    }
+    .confirm_btnGroup {
+        width: 100%;
+        margin-bottom: 10px;
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            background-color: #2d74c4;
+            color: white;
+            font-size: 16px;
+            transition: all 0.2s;
+            padding: 10px 60px;
+            &:nth-child(1) {
+                &:hover {
+                    background-color: #2d74c4d7;
+                }
+                &:disabled {
+                    background-color: #1f252b;
+                    color: grey;
+                }
+            }
+            &:nth-child(2) {
+                background-color: transparent;
+                border: 2px dotted #2d74c4;
+                color: #2d74c4;
+                &:hover {
+                    border: 2px dotted #2d74c4a0;
+                    color: #2d74c4a0;
+                }
+            }
+        }
+    }
+}
+.homeCard {
+    &__first {
+        padding: 20px 30px 0 30px;
+    }
+    &__badge {
+        padding: 0px 10px;
+        height: 24px;
+    }
+}
+
+.view_vault {
+    width: 150px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#claimSuccessModal {
+    visibility: hidden;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 250px;
+    background-color: #203532;
+    border-radius: 10px;
+    padding: 0 10px 0 5px;
+}
+
+#claimFailModal {
+    visibility: hidden;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 250px;
+    background-color: #371e25;
+    border-radius: 10px;
+    padding: 0 10px 0 5px;
+}
+
+#claimSuccessModal.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 1s 4s;
+    animation: fadein 0.5s, fadeout 1s 4s;
+}
+
+#claimFailModal.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 1s 4s;
+    animation: fadein 0.5s, fadeout 1s 4s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: 50px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        right: 50px;
+        opacity: 1;
+    }
+
+    to {
+        right: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        right: 50px;
+        opacity: 1;
+    }
+
+    to {
+        right: 0;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .vaultCard {
+        width: 355px;
+    }
+    .homeCard {
+        width: 270px;
+    }
+    #claimSuccessModal,
+    #claimFailModal {
+        top: 100px;
+        right: 20px;
+        bottom: auto;
+    }
+    .depositModal {
+        width: 360px;
+        .confirm_btnGroup {
+            button {
+                padding: 10px 40px;
+            }
+        }
+    }
+    @-webkit-keyframes fadein {
+        from {
+            right: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: 20px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            right: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: 20px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            right: 20px;
+            opacity: 1;
+        }
+
+        to {
+            right: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            right: 20px;
+            opacity: 1;
+        }
+
+        to {
+            right: 0;
+            opacity: 0;
+        }
+    }
+}

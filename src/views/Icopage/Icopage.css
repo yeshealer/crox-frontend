@@ -1,0 +1,273 @@
+.header-detail {
+    width: 94%;
+    background-color: #253253;
+    margin: 1% auto;
+    padding: 15px 30px;
+}
+
+.accept_btn {
+    background: #D7544C;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0 10px;
+    height: 25px;
+    margin: auto;
+}
+
+.wallet-connect {
+    background: #2d74c4;
+    border-radius: 15px;
+    padding: 3px 12px;
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+
+.StatusConnectBtn {
+    font-size: 15px;
+    border-radius: 0;
+    padding: 0 20px;
+    height: 40px;
+}
+
+.accept_btn:disabled {
+    background: black;
+}
+
+.overlay_text {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    letter-spacing: -0.5px;
+}
+
+.buytoken_btn {
+    background-color: rgb(69, 131, 201);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    margin-top: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 35px;
+    padding: 0 15px;
+}
+
+.buytoken_btn:hover {
+    background-color: rgb(69, 131, 201);
+}
+
+
+.buytoken_btn:disabled {
+    background-color: black;
+}
+
+.cardContent {
+    padding: 0px 15px !important;
+    display: flex;
+    justify-content: center;
+}
+
+.tabbody {
+    margin: 10px 0px;
+    background-color: #253253 !important;
+    padding: 0;
+    right: 0;
+    border-left: 2px solid #5774ae;
+    border-right: 2px solid #5774ae;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+.sale_detail_mobile_header {
+    background-color: #15161c;
+    padding: 15px;
+}
+
+.xpad_heading {
+    width: 85%;
+    margin: 10px auto;
+    background-color: #253253;
+    padding: 12px 2em;
+    border-radius: none;
+}
+
+.middle_page {
+    max-width: 1168px;
+    margin: auto;
+}
+
+.timeline h6 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Baloo 2', cursive;
+    color: white;
+}
+
+.xpad_heading_text {
+    width: calc(100% - 150px);
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    padding: 0;
+}
+
+.vertical-timeline-element {
+    margin: 0.5em 0;
+}
+
+.my_token_info {
+    background-color: #1a1b23;
+    padding: 20px;
+    margin: 15px 5px;
+    min-width: 180px;
+}
+
+.discount {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    position: absolute;
+    display: inline-block;
+    background: #fff;
+    width: auto;
+    margin: 130px 130px;
+    height: 27px;
+    line-height: 29px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #3399FF;
+    text-align: center;
+    border-radius: 4px;
+    padding: 0 15px;
+}
+
+.discount:after {
+    content: " ";
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    position: absolute;
+    top: 4px;
+    left: -9px;
+    border-radius: 4px;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.discount:before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: #3399FF;
+    position: absolute;
+    top: 11px;
+    left: 0px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.vc {
+    background: #3399FF;
+    border-radius: 30px 0 0 30px;
+    color: #fff;
+    width: 150px;
+    text-align: center;
+    padding: 6px 18px;
+    position: relative;
+    border-right: 1px dashed #fff;
+    font-size: 15px;
+}
+
+.vc:after {
+    width: 0;
+    height: 0;
+    border: 12.5px solid transparent;
+    position: absolute;
+    content: "";
+    border-top-color: #3399FF;
+    right: -26px;
+    top: 0px;
+    border-left-color: #3399FF;
+}
+
+.vc:before {
+    width: 0;
+    height: 0;
+    border: 14px solid transparent;
+    position: absolute;
+    content: "";
+    border-bottom-color: #3399FF;
+    right: -27px;
+    top: -1px;
+}
+
+.disableButton:disabled {
+    background-color: #3c3742 !important;
+}
+
+@media screen and (max-width: 1000px) {
+    .header-detail {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .acceptbtn_contaier {
+        text-align: center;
+    }
+
+    .accept_btn {
+        width: 100px;
+        margin: auto;
+    }
+
+    .buytoken_btn {
+        margin-top: 60px;
+    }
+
+    .overlay_text {
+        font-size: 15px;
+    }
+
+    .big_text {
+        font-size: 14px !important;
+    }
+
+    .xpad_heading {
+        width: 90%;
+        padding: 18px;
+        background-image: url("./components/crox-rocket.png");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+    }
+
+    .xpad_heading_text {
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 30px 20px;
+        width: 100%;
+    }
+
+    .xpad_heading img {
+        display: none;
+    }
+
+    .my_token_info {
+        min-width: 100px;
+    }
+
+    .small_font {
+        font-size: 14px;
+    }
+}
